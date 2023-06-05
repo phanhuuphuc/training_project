@@ -1,0 +1,21 @@
+<?php
+
+namespace DummyNamespace;
+
+use Mi\L5Core\Contracts\CriteriaInterface;
+
+class DummyClass implements CriteriaInterface
+{
+    /**
+     * Apply criteria in query repository
+     *
+     * @param string              $model
+     * @param RepositoryInterface $repository
+     *
+     * @return mixed
+     */
+    public function apply($model, RepositoryInterface $repository)
+    {
+
+    }
+}

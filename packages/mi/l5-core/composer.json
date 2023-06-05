@@ -1,0 +1,45 @@
+{
+    "name": "mi/l5-core",
+    "description": "Core Dependencies for Laravel v5",
+    "type": "library",
+    "authors": [
+        {
+            "name": "My Truong",
+            "email": "hoangmy92@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mi\\L5Core\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mi\\L5Core\\L5CoreServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+        "nunomaduro/larastan": "^2.2",
+        "phpmd/phpmd": "^2.6",
+        "phpstan/phpstan": "^1.8",
+        "sirbrillig/phpcs-import-detection": "^1.3",
+        "squizlabs/php_codesniffer": "^3.7"
+    },
+    "scripts": {
+        "lint": [
+            "./vendor/bin/phpcs src",
+            "./vendor/bin/phpstan analyse --no-progress",
+            "./vendor/bin/phpmd src text ./phpmd.xml"
+        ]
+    }
+}

@@ -1,0 +1,18 @@
+<?php
+
+namespace DummyNamespace;
+
+use Mi\L5Core\Repositories\BaseRepository;
+
+class DummyClass extends BaseRepository
+{
+    /**
+     * Get the model of repository
+     *
+     * @return string
+     */
+    public function getModel()
+    {
+        return ;
+    }
+}

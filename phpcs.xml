@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<ruleset name="Custom Standard">
+    <rule ref="PSR2">
+        <exclude name="Generic.Files.LineLength"/>
+        <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
+    </rule>
+
+    <!-- https://github.com/sirbrillig/phpcs-import-detection -->
+    <rule ref="ImportDetection"/>
+    <rule ref="ImportDetection.Imports.RequireImports">
+        <properties>
+            <property name="ignoreUnimportedSymbols" value="/^(dispatch|config|config_path|event|base_path|env|resource_path|database_path|factory|collect|\_\_|auth|now|storage_path|class_basename|url|optional|response|encrypt|decrypt|redirect|route|view|app|LARAVEL_START|dd|resolve|throw_if)$/"/>
+        </properties>
+    </rule>
+
+    <file>app</file>
+    <!-- <file>bootstrap/app.php</file>
+    <file>config</file>
+    <file>database</file>
+    <file>resources/lang</file> -->
+    <!-- <file>routes</file> -->
+    <!-- <file>tests</file> -->
+    <!-- <file>packages/l5-core/src</file> -->
+
+    <!-- Ignore specific folder -->
+    <exclude-pattern>app/Http/Controllers/Auth</exclude-pattern>
+    <exclude-pattern>app/Http/Requests/Auth</exclude-pattern>
+    <exclude-pattern>app/Providers</exclude-pattern>
+    <exclude-pattern>app/Http/Controllers/ProfileController.php</exclude-pattern>
+</ruleset>

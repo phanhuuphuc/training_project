@@ -1,0 +1,21 @@
+<?php
+
+namespace DummyNamespace;
+
+use Mi\L5Core\Services\BaseService;
+
+class DummyClass extends BaseService
+{
+    public function __construct($repository)
+    {
+        $this->repository = $repository;
+    }
+
+    /**
+     * Logic to handle the data
+     */
+    public function handle()
+    {
+
+    }
+}
